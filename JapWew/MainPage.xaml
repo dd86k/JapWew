@@ -1,0 +1,46 @@
+﻿<Page x:Class="JapWew.MainPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:JapWew"
+      mc:Ignorable="d" 
+      d:DesignHeight="400" d:DesignWidth="600"
+      Title="MainPage">
+
+    <Grid Background="White">
+        <StackPanel Height="50" Margin="0" VerticalAlignment="Top" Orientation="Horizontal">
+            <Label x:Name="TransformLabel" Content="Transform" FontSize="29.333" Height="50" HorizontalAlignment="Left" Width="165" Margin="50,0,0,0"/>
+        </StackPanel>
+        <TextBox x:Name="MainTextBox" Margin="10,50,10,65" TextWrapping="Wrap" FontSize="16"
+                 Background="{x:Null}"/>
+        <DockPanel Height="50" Margin="10,0,10,10" VerticalAlignment="Bottom">
+            <VirtualizingStackPanel Orientation="Horizontal">
+                <Button x:Name="NormalizeButton" Style="{StaticResource MetroCircleButtonStyle}" Width="50" Height="50" HorizontalAlignment="Left" Click="NormalizeButton_Click"  ToolTip="Normalize">
+                    <Path Data="M14 12c0-1.1-.9-2-2-2s-2 .9-2 2 .9 2 2 2 2-.9 2-2zm-2-9c-4.97 0-9 4.03-9 9H0l4 4 4-4H5c0-3.87 3.13-7 7-7s7 3.13 7 7-3.13 7-7 7c-1.51 0-2.91-.49-4.06-1.3l-1.42 1.44C8.04 20.3 9.94 21 12 21c4.97 0 9-4.03 9-9s-4.03-9-9-9z" Fill="Black" Margin="-3,-3,0,0" />
+                </Button>
+                <Button x:Name="CopyToClipboardButton" Style="{StaticResource MetroCircleButtonStyle}" Width="50" Height="50" HorizontalAlignment="Left" Click="CopyToClipboardButton_Click" ToolTip="Copy to clipboard">
+                    <Path Data="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z" Fill="Black" Margin="-2,-2,0,0" />
+                </Button>
+                <Button x:Name="ClearButton" Style="{StaticResource MetroCircleButtonStyle}" Width="50" Height="50" HorizontalAlignment="Left" Click="ClearButton_Click" ToolTip="Clear all">
+                    <Path Data="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z" Margin="-5,-5,0,0" Fill="Black"/>
+                </Button>
+            </VirtualizingStackPanel>
+            
+            <VirtualizingStackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                <ComboBox x:Name="TransformationComboBox" Margin="8" SelectedIndex="0"
+                          HorizontalAlignment="Stretch">
+                    <ComboBoxItem>Ｆｕｌｌｗｉｄｔｈ</ComboBoxItem>
+                    <ComboBoxItem>▄█▀ █▬█ █ ▀█▀</ComboBoxItem>
+                    <ComboBoxItem>Sᴍᴀʟʟᴄᴀᴘs</ComboBoxItem>
+                    <ComboBoxItem>Ⓒⓘⓡⓒⓛⓔ</ComboBoxItem>
+                    <ComboBoxItem>⒫⒜⒭⒜⒯⒣⒠⒮⒠</ComboBoxItem>
+                    <ComboBoxItem>Ụṇḍẹṛ-Ḍọṭṭẹḍ</ComboBoxItem>
+                </ComboBox>
+                <Button x:Name="ApplyButton" Style="{StaticResource MetroCircleButtonStyle}"  Width="50" Height="50" Click="ApplyButton_Click" ToolTip="Apply">
+                    <Path Data="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z" Fill="Black" Margin="-4,-4,0,0"/>
+                </Button>
+            </VirtualizingStackPanel>
+        </DockPanel>
+    </Grid>
+</Page>

@@ -1,0 +1,82 @@
+﻿<Controls:MetroWindow x:Name="metroWindow" x:Class="JapWew.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:JapWew"
+        mc:Ignorable="d"
+        Title="JapWew" Height="400" Width="550"
+        GlowBrush="{StaticResource AccentColorBrush}"
+        ResizeMode="CanResizeWithGrip" WindowStartupLocation="CenterScreen"
+        MouseDown="metroWindow_MouseDown">
+    <Controls:MetroWindow.Resources>
+        <Storyboard x:Key="StoryboardMenuBarOpen">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="MenuBar">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <QuinticEase EasingMode="EaseOut"/>
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="200">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <QuinticEase EasingMode="EaseOut"/>
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="StoryboardMenuBarClose">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="MenuBar">
+                <EasingDoubleKeyFrame KeyTime="0" Value="200">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <QuarticEase EasingMode="EaseOut"/>
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="0">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <QuinticEase EasingMode="EaseOut"/>
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+    </Controls:MetroWindow.Resources>
+
+    <Grid x:Name="grid">
+        <DockPanel x:Name="MenuBar" Margin="-200,0,0,0" Panel.ZIndex="5"  Width="200" HorizontalAlignment="Left" Background="#FFF9F9F9">
+            <DockPanel.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </DockPanel.RenderTransform>
+            <StackPanel HorizontalAlignment="Stretch" VerticalAlignment="Top" DockPanel.Dock="Top">
+                <Button x:Name="MenuButton" HorizontalAlignment="Left" VerticalAlignment="Top" Width="40" Height="40" Style="{StaticResource MetroFlatButton}" Click="MenuButton_Click">
+                    <Path HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="2,8,2,8" Fill="Black"
+                                Data="M2 15.5v2h20v-2H2zm0-5v2h20v-2H2zm0-5v2h20v-2H2z" Stretch="Fill"/>
+                </Button>
+                
+                <!-- Tools -->
+                <Label x:Name="label" Content="Tools"/>
+                <Button x:Name="MenuTransformButton" Click="MenuTransformButton_Click" Content="Transform"/>
+                <Button x:Name="MenuDiagnosisButton" Click="MenuDiagnosisButton_Click" Content="Diagnosis"/>
+                <Separator/>
+                <Button x:Name="MenuSettingsButton" Click="MenuSettings_Click" Content="Settings"/>
+                
+                <!-- Help -->
+                <Label x:Name="label1" Content="Help"/>
+                <Button x:Name="MenuAboutButton" Click="MenuAbout_Click" Content="About"/>
+            </StackPanel>
+
+            <StackPanel VerticalAlignment="Bottom" HorizontalAlignment="Stretch">
+                <Button x:Name="MenuExitButton" Click="MenuExitButton_Click">Exit</Button>
+            </StackPanel>
+        </DockPanel>
+
+        <Button x:Name="MainMenuButton" HorizontalAlignment="Left" VerticalAlignment="Top" Width="40" Height="40" Style="{StaticResource MetroFlatButton}" Click="MainMenuButton_Click">
+            <Path Data="M2 15.5v2h20v-2H2zm0-5v2h20v-2H2zm0-5v2h20v-2H2z" Margin="2,8,2,8" Fill="Black" Stretch="Fill"/>
+        </Button>
+        <Frame x:Name="MainFrame" NavigationUIVisibility="Hidden" Source="/JapWew;component/MainPage.xaml" Panel.ZIndex="-2"/>
+    </Grid>
+</Controls:MetroWindow>

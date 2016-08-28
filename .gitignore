@@ -2,6 +2,11 @@
 Thumbs.db
 ehthumbs.db
 
+bin
+obj
+.vs
+packages
+
 # Folder config file
 Desktop.ini
 
