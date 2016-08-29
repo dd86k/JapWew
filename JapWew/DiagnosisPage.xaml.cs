@@ -36,7 +36,6 @@ namespace JapWew
             HtmlCodeTextBox.Text = HtmlHelper.GetHtmlCode(c);
             HtmlCodeHexTextBox.Text = HtmlHelper.GetHtmlHexCode(c);
             DataTextBox.Text = HtmlHelper.GetData(c.ToString());
-            return;
         }
 
         private void CharacterTextBox_TextChanged(object sender, TextChangedEventArgs e)
