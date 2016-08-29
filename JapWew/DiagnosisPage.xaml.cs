@@ -32,16 +32,11 @@ namespace JapWew
 
         void ProcessCharacter(char c)
         {
-            if (c == '\0')
-            { // Clear
-                UnicodeNumberTextBox.Text = "U+0000";
-                HtmlCodeTextBox.Text = "&#0;";
-            }
-            else
-            {
-                UnicodeNumberTextBox.Text = $"U+{(int)c:X4}";
-                HtmlCodeTextBox.Text = $"&#{(int)c};";
-            }
+            UnicodeNumberTextBox.Text = HtmlHelper.GetUnicodeCodePoint(c);
+            HtmlCodeTextBox.Text = HtmlHelper.GetHtmlCode(c);
+            HtmlCodeHexTextBox.Text = HtmlHelper.GetHtmlHexCode(c);
+            DataTextBox.Text = HtmlHelper.GetData(c.ToString());
+            return;
         }
 
         private void CharacterTextBox_TextChanged(object sender, TextChangedEventArgs e)

@@ -13,17 +13,21 @@
             <Label x:Name="DiagnosisLabel" Content="Diagnosis" FontSize="30" HorizontalAlignment="Left" Margin="50,0,0,0"/>
         </StackPanel>
         <Grid HorizontalAlignment="Stretch" Margin="0,55,0,0" VerticalAlignment="Stretch">
+
+            <StackPanel HorizontalAlignment="Stretch" CanVerticallyScroll="True" ScrollViewer.CanContentScroll="True">
             <Label HorizontalAlignment="Left" VerticalAlignment="Top"
-                   Width="Auto" Height="Auto" Margin="10,0,0,0" FontSize="16">
+                   Width="Auto" Height="Auto" FontSize="16">
                 Input Character
             </Label>
-            <TextBox x:Name="CharacterTextBox" Width="40" Height="40" Margin="45,31.28,0,0" FontSize="20" TextAlignment="Center" HorizontalAlignment="Left" VerticalAlignment="Top" MaxLength="1" TextChanged="CharacterTextBox_TextChanged"/>
-
-            <StackPanel HorizontalAlignment="Right" Width="200" CanVerticallyScroll="True" ScrollViewer.CanContentScroll="True">
+            <TextBox x:Name="CharacterTextBox" Height="40" FontSize="20" TextAlignment="Center" MaxLength="1" TextChanged="CharacterTextBox_TextChanged"/>
                 <Label>Unicode number</Label>
                 <TextBox x:Name="UnicodeNumberTextBox" IsReadOnly="True">U+0000</TextBox>
                 <Label>HTML code</Label>
                 <TextBox x:Name="HtmlCodeTextBox" IsReadOnly="True">&amp;#0;</TextBox>
+                <Label>HTML code</Label>
+                <TextBox x:Name="HtmlCodeHexTextBox" IsReadOnly="True">&amp;#x0;</TextBox>
+                <Label>Data</Label>
+                <TextBox x:Name="DataTextBox" IsReadOnly="True">00</TextBox>
             </StackPanel>
         </Grid>
     </Grid>

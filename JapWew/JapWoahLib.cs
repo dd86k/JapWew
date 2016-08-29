@@ -347,16 +347,18 @@ namespace JapWoahLib
             return _out.ToString();
         }
 
+        //TODO: Finish Normalize
+
         public static string Normalize(string input)
         {
             StringBuilder _out = new StringBuilder();
-            var FULLWIDTH = 65248;
-            var CIRCLED = 9327;
-            var PARA = 9275;
+            ushort FULLWIDTH = 65248;
+            ushort CIRCLED = 9327;
+            ushort PARA = 9275;
             ushort c;
 
-            var len = input.Length;
-            for (var i = 0; i < len; i++)
+            int len = input.Length;
+            for (int i = 0; i < len; i++)
             {
                 c = input[i];
 

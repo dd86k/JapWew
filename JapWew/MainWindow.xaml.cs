@@ -16,6 +16,8 @@ using MahApps.Metro.Controls;
 using System.Windows.Media.Animation;
 using JapWoahLib;
 
+//TODO: Make selection clipboard shit 
+
 namespace JapWew
 {
     public enum Pages
