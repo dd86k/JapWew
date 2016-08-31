@@ -25,22 +25,20 @@ namespace JapWew
             InitializeComponent();
         }
 
-        private void BackButton_Click(object sender, RoutedEventArgs e)
-        {
-            MainWindow.SetPageEx(Pages.Main);
-        }
-
-        void ProcessCharacter(string c)
+        void ProcessString(string c)
         {
             UnicodeNumberTextBox.Text = HtmlHelper.GetUnicodeCodePoint(c);
             HtmlCodeTextBox.Text = HtmlHelper.GetHtmlCode(c);
             HtmlCodeHexTextBox.Text = HtmlHelper.GetHtmlHexCode(c);
             Utf16leTextBox.Text = HtmlHelper.GetUtf16leData(c);
+            EntityTextBox.Text =
+                c.Length > 0 ?
+                HtmlHelper.GetHtmlEntity(c[0]) : "--";
         }
 
         private void CharacterTextBox_TextChanged(object sender, TextChangedEventArgs e)
         {
-            ProcessCharacter(CharacterTextBox.Text);
+            ProcessString(CharacterTextBox.Text);
         }
     }
 }

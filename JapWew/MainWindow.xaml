@@ -52,7 +52,7 @@
                 </TransformGroup>
             </DockPanel.RenderTransform>
             <StackPanel HorizontalAlignment="Stretch" VerticalAlignment="Top" DockPanel.Dock="Top">
-                <Button x:Name="MenuButton" HorizontalAlignment="Left" VerticalAlignment="Top" Width="40" Height="40" Style="{StaticResource MetroFlatButton}" Click="MenuButton_Click">
+                <Button x:Name="MenuButton" HorizontalAlignment="Left" VerticalAlignment="Top" Width="42" Height="42" Style="{StaticResource MetroFlatButton}" Click="MenuButton_Click">
                     <Path HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="2,8,2,8" Fill="Black"
                                 Data="M2 15.5v2h20v-2H2zm0-5v2h20v-2H2zm0-5v2h20v-2H2z" Stretch="Fill"/>
                 </Button>
@@ -61,20 +61,22 @@
                 <Label x:Name="label" Content="Tools"/>
                 <Button x:Name="MenuTransformButton" Click="MenuTransformButton_Click" Content="Transform"/>
                 <Button x:Name="MenuDiagnosisButton" Click="MenuDiagnosisButton_Click" Content="Diagnosis"/>
-                <Separator/>
-                <Button x:Name="MenuSettingsButton" Click="MenuSettings_Click" Content="Settings"/>
                 
-                <!-- Help -->
-                <Label x:Name="label1" Content="Help"/>
-                <Button x:Name="MenuAboutButton" Click="MenuAbout_Click" Content="About"/>
+                <!-- App -->
+                <Label>App</Label>
+                <Button x:Name="MenuExitButton" Click="MenuExitButton_Click">Exit</Button>
+
+                <!-- Help 
+                <Label x:Name="label1" Content="Help"/>-->
             </StackPanel>
 
             <StackPanel VerticalAlignment="Bottom" HorizontalAlignment="Stretch">
-                <Button x:Name="MenuExitButton" Click="MenuExitButton_Click">Exit</Button>
+                <Button x:Name="MenuSettingsButton" Click="MenuSettings_Click" Content="Settings"/>
+                <Button x:Name="MenuAboutButton" Click="MenuAbout_Click" Content="About"/>
             </StackPanel>
         </DockPanel>
 
-        <Button x:Name="MainMenuButton" HorizontalAlignment="Left" VerticalAlignment="Top" Width="40" Height="40" Style="{StaticResource MetroFlatButton}" Click="MainMenuButton_Click">
+        <Button x:Name="MainMenuButton" HorizontalAlignment="Left" VerticalAlignment="Top" Width="42" Height="42" Style="{StaticResource MetroFlatButton}" Click="MainMenuButton_Click">
             <Path Data="M2 15.5v2h20v-2H2zm0-5v2h20v-2H2zm0-5v2h20v-2H2z" Margin="2,8,2,8" Fill="Black" Stretch="Fill"/>
         </Button>
         <Frame x:Name="MainFrame" NavigationUIVisibility="Hidden" Source="/JapWew;component/MainPage.xaml" Panel.ZIndex="-2"/>

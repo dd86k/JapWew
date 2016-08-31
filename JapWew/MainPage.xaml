@@ -9,8 +9,8 @@
       Title="MainPage">
 
     <Grid Background="White">
-        <StackPanel Height="40" Margin="0" VerticalAlignment="Top" Orientation="Horizontal">
-            <Label x:Name="TransformLabel" Content="Transform" FontSize="22" HorizontalAlignment="Left" Margin="50,0,0,0"/>
+        <StackPanel Height="42" Margin="0" VerticalAlignment="Top" Orientation="Horizontal">
+            <Label x:Name="TransformLabel" Content="Transform" FontSize="24" HorizontalAlignment="Left" Margin="50,0,0,0"/>
         </StackPanel>
         <TextBox x:Name="MainTextBox" Margin="10,50,10,65" FontSize="16"
                  Background="{x:Null}" AcceptsReturn="True" AcceptsTab="True"/>

@@ -9,8 +9,8 @@
       Title="DiagnosisPage">
 
     <Grid Background="White">
-        <StackPanel Height="40" Margin="0" VerticalAlignment="Top" Orientation="Horizontal">
-            <Label x:Name="DiagnosisLabel" Content="Diagnosis" FontSize="22" HorizontalAlignment="Left" Margin="50,0,0,0"/>
+        <StackPanel Height="42" Margin="0" VerticalAlignment="Top" Orientation="Horizontal">
+            <Label x:Name="DiagnosisLabel" Content="Diagnosis" FontSize="24" HorizontalAlignment="Left" Margin="50,0,0,0"/>
         </StackPanel>
         <StackPanel HorizontalAlignment="Stretch" Margin="0,40,0,0" VerticalAlignment="Stretch">
             <StackPanel HorizontalAlignment="Stretch" CanVerticallyScroll="True" ScrollViewer.CanContentScroll="True">
@@ -18,13 +18,15 @@
                    Width="Auto" Height="Auto" FontSize="16" Content="Input Character"/>
                 <TextBox x:Name="CharacterTextBox" Height="40" FontSize="20" TextAlignment="Center" MaxLength="2" TextChanged="CharacterTextBox_TextChanged"/>
             </StackPanel>
-            <StackPanel CanVerticallyScroll="True" Height="599" >
+            <StackPanel CanVerticallyScroll="True">
                 <Label>Unicode number</Label>
                 <TextBox x:Name="UnicodeNumberTextBox" IsReadOnly="True">U+0000</TextBox>
                 <Label>HTML code</Label>
                 <TextBox x:Name="HtmlCodeTextBox" IsReadOnly="True">&amp;#0;</TextBox>
                 <Label>Hex HTML code</Label>
                 <TextBox x:Name="HtmlCodeHexTextBox" IsReadOnly="True">&amp;#x0;</TextBox>
+                <Label>Entity</Label>
+                <TextBox x:Name="EntityTextBox" IsReadOnly="True"></TextBox>
                 <Label FontSize="20">Encoding</Label>
                 <Label>UTF-16LE</Label>
                 <TextBox x:Name="Utf16leTextBox" IsReadOnly="True">00</TextBox>
