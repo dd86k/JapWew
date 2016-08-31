@@ -14,12 +14,14 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using MahApps.Metro.Controls;
 using System.Windows.Media.Animation;
-using JapWoahLib;
 
 //TODO: Make selection clipboard shit 
 
 namespace JapWew
 {
+    /// <summary>
+    /// Main list of pages available.
+    /// </summary>
     public enum Pages
     {
         Main,

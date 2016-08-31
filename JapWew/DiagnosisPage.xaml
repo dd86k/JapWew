@@ -9,26 +9,26 @@
       Title="DiagnosisPage">
 
     <Grid Background="White">
-        <StackPanel Height="50" Margin="0" VerticalAlignment="Top" Orientation="Horizontal">
-            <Label x:Name="DiagnosisLabel" Content="Diagnosis" FontSize="30" HorizontalAlignment="Left" Margin="50,0,0,0"/>
+        <StackPanel Height="40" Margin="0" VerticalAlignment="Top" Orientation="Horizontal">
+            <Label x:Name="DiagnosisLabel" Content="Diagnosis" FontSize="22" HorizontalAlignment="Left" Margin="50,0,0,0"/>
         </StackPanel>
-        <Grid HorizontalAlignment="Stretch" Margin="0,55,0,0" VerticalAlignment="Stretch">
-
+        <StackPanel HorizontalAlignment="Stretch" Margin="0,40,0,0" VerticalAlignment="Stretch">
             <StackPanel HorizontalAlignment="Stretch" CanVerticallyScroll="True" ScrollViewer.CanContentScroll="True">
-            <Label HorizontalAlignment="Left" VerticalAlignment="Top"
-                   Width="Auto" Height="Auto" FontSize="16">
-                Input Character
-            </Label>
-            <TextBox x:Name="CharacterTextBox" Height="40" FontSize="20" TextAlignment="Center" MaxLength="1" TextChanged="CharacterTextBox_TextChanged"/>
+                <Label HorizontalAlignment="Left" VerticalAlignment="Top"
+                   Width="Auto" Height="Auto" FontSize="16" Content="Input Character"/>
+                <TextBox x:Name="CharacterTextBox" Height="40" FontSize="20" TextAlignment="Center" MaxLength="2" TextChanged="CharacterTextBox_TextChanged"/>
+            </StackPanel>
+            <StackPanel CanVerticallyScroll="True" Height="599" >
                 <Label>Unicode number</Label>
                 <TextBox x:Name="UnicodeNumberTextBox" IsReadOnly="True">U+0000</TextBox>
                 <Label>HTML code</Label>
                 <TextBox x:Name="HtmlCodeTextBox" IsReadOnly="True">&amp;#0;</TextBox>
-                <Label>HTML code</Label>
+                <Label>Hex HTML code</Label>
                 <TextBox x:Name="HtmlCodeHexTextBox" IsReadOnly="True">&amp;#x0;</TextBox>
-                <Label>Data</Label>
-                <TextBox x:Name="DataTextBox" IsReadOnly="True">00</TextBox>
+                <Label FontSize="20">Encoding</Label>
+                <Label>UTF-16LE</Label>
+                <TextBox x:Name="Utf16leTextBox" IsReadOnly="True">00</TextBox>
             </StackPanel>
-        </Grid>
+        </StackPanel>
     </Grid>
 </Page>

@@ -30,20 +30,17 @@ namespace JapWew
             MainWindow.SetPageEx(Pages.Main);
         }
 
-        void ProcessCharacter(char c)
+        void ProcessCharacter(string c)
         {
             UnicodeNumberTextBox.Text = HtmlHelper.GetUnicodeCodePoint(c);
             HtmlCodeTextBox.Text = HtmlHelper.GetHtmlCode(c);
             HtmlCodeHexTextBox.Text = HtmlHelper.GetHtmlHexCode(c);
-            DataTextBox.Text = HtmlHelper.GetData(c.ToString());
+            Utf16leTextBox.Text = HtmlHelper.GetUtf16leData(c);
         }
 
         private void CharacterTextBox_TextChanged(object sender, TextChangedEventArgs e)
         {
-            ProcessCharacter(
-                CharacterTextBox.Text.Length > 0 ?
-                CharacterTextBox.Text[0] : '\0'
-            );
+            ProcessCharacter(CharacterTextBox.Text);
         }
     }
 }
