@@ -78,7 +78,12 @@ namespace JapWew
 
         private void CopyToClipboardButton_Click(object sender, RoutedEventArgs e)
         {
-            Clipboard.SetText(MainTextBox.Text, TextDataFormat.UnicodeText);
+            int sl = MainTextBox.SelectionLength;
+            int ss = MainTextBox.SelectionStart;
+            bool s = sl > 0;
+            string t = s ? MainTextBox.SelectedText : MainTextBox.Text;
+
+            Clipboard.SetText(t, TextDataFormat.UnicodeText);
         }
 
         private void ClearButton_Click(object sender, RoutedEventArgs e)

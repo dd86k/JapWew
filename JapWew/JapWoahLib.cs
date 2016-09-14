@@ -4,6 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+//TODO: Use pointers instead.
+
 namespace JapWoahLib
 {
     public static class JapWoah
@@ -17,7 +19,7 @@ namespace JapWoahLib
             int len = input.Length;
 
             StringBuilder _out = new StringBuilder();
-            for (var i = 0; i < len; i++)
+            for (int i = 0; i < len; i++)
             {
                 c = input[i];
 
@@ -48,7 +50,7 @@ namespace JapWoahLib
             int len = input.Length;
 
             StringBuilder _out = new StringBuilder();
-            for (var i = 0; i < len; i++)
+            for (int i = 0; i < len; i++)
             {
                 c = input[i];
 
@@ -80,7 +82,7 @@ namespace JapWoahLib
             int len = input.Length;
 
             StringBuilder _out = new StringBuilder();
-            for (var i = 0; i < len; i++)
+            for (int i = 0; i < len; i++)
             {
                 c = input[i];
 
@@ -110,7 +112,7 @@ namespace JapWoahLib
             int len = input.Length;
 
             StringBuilder _out = new StringBuilder();
-            for (var i = 0; i < len; i++)
+            for (int i = 0; i < len; i++)
             {
                 c = (short)input[i];
 
@@ -269,7 +271,7 @@ namespace JapWoahLib
             StringBuilder _out = new StringBuilder();
 
             int len = input.Length;
-            for (var i = 0; i < len; i++)
+            for (int i = 0; i < len; i++)
             {
                 c = (short)input[i];
 
@@ -527,6 +529,7 @@ namespace JapWoahLib
                             if (c >= 0x24EA && c <= 0x2468) c += 64;
                             // Number 0
                             if (c == 0x24E9) c -= 75;
+
                             _out.Append((char)(c - CIRCLED));
                         }
                         break;

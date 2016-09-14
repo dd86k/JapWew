@@ -14,8 +14,6 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 //TODO: Theme
-//TODO: Smart word selection (textbox property)
-//TODO: Spellcheck (textbox property)
 
 namespace JapWew
 {

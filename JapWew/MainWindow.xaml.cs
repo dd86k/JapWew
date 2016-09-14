@@ -15,8 +15,6 @@ using System.Windows.Shapes;
 using MahApps.Metro.Controls;
 using System.Windows.Media.Animation;
 
-//TODO: Make selection clipboard shit 
-
 namespace JapWew
 {
     /// <summary>
