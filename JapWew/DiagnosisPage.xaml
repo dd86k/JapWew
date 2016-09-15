@@ -21,23 +21,23 @@
                     <TextBox x:Name="CharacterTextBox" Height="40" FontSize="20" TextAlignment="Center" MaxLength="2" TextChanged="CharacterTextBox_TextChanged"/>
                 </StackPanel>
             </GroupBox>
-            <DockPanel Height="256" VerticalAlignment="Stretch" Canvas.Bottom="10">
-                <ScrollViewer VerticalScrollBarVisibility="Auto">
-                <StackPanel>
-                    <Label Content="Unicode number"/>
-                    <TextBox x:Name="UnicodeNumberTextBox" IsReadOnly="True" Text="U+0000"/>
-                    <Label Content="HTML code"/>
-                    <TextBox x:Name="HtmlCodeTextBox" IsReadOnly="True" Text="&amp;#0;"/>
-                    <Label Content="Hex HTML code"/>
-                    <TextBox x:Name="HtmlCodeHexTextBox" IsReadOnly="True" Text="&amp;#x0;"/>
-                    <Label Content="Entity"/>
-                    <TextBox x:Name="EntityTextBox" IsReadOnly="True"/>
-                    <Label FontSize="20" Content="Encoding"/>
-                    <Label Content="UTF-16LE"/>
-                    <TextBox x:Name="Utf16leTextBox" IsReadOnly="True" Text="00"/>
-                </StackPanel>
+            <Grid Height="250" VerticalAlignment="Stretch">
+                <ScrollViewer VerticalScrollBarVisibility="Visible">
+                    <StackPanel Height="Auto" VerticalAlignment="Stretch">
+                <Label Content="Unicode number"/>
+                <TextBox x:Name="UnicodeNumberTextBox" IsReadOnly="True" Text="U+0000"/>
+                <Label Content="HTML code"/>
+                <TextBox x:Name="HtmlCodeTextBox" IsReadOnly="True" Text="&amp;#0;"/>
+                <Label Content="Hex HTML code"/>
+                <TextBox x:Name="HtmlCodeHexTextBox" IsReadOnly="True" Text="&amp;#x0;"/>
+                <Label Content="Entity"/>
+                <TextBox x:Name="EntityTextBox" IsReadOnly="True"/>
+                <Label FontSize="20" Content="Encoding"/>
+                <Label Content="UTF-16LE"/>
+                <TextBox x:Name="Utf16leTextBox" IsReadOnly="True" Text="00"/>
+                    </StackPanel>
                 </ScrollViewer>
-            </DockPanel>
+            </Grid>
         </StackPanel>
     </Grid>
 </Page>
